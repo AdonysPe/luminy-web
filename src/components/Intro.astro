@@ -1,0 +1,46 @@
+---
+import Rhombus from "../components/Rhombus.astro";
+import PostIntro from "./PostIntro.astro";
+---
+
+<article class="grid place-content-center mt-20">
+  <section class="relative">
+    <div class="flex items-center justify-center">
+      <Rhombus
+        src="https://pics.craiyon.com/2023-11-04/fa4ea4cbb4df485cbbd67c0c79cae0d9.webp"
+      />
+      <Rhombus
+        src="https://phantom-marca.unidadeditorial.es/ce602712648b2e7cfd207366ee085ab5/resize/828/f/jpg/assets/multimedia/imagenes/2023/10/17/16975559578366.png"
+      />
+      <Rhombus
+        src="https://c02.purpledshub.com/uploads/sites/62/2023/01/Giant-panda-c2c51b8.jpg?w=1029&webp=12"
+      />
+    </div>
+    <div class="flex items-center justify-center -mt-[135px]">
+      <Rhombus
+        src="https://pbs.twimg.com/media/GEfGykdWcAArhPI?format=jpg&name=900x900"
+      />
+      <Rhombus
+        src="https://pbs.twimg.com/profile_images/608383471862611969/d2FFA2nU_400x400.jpg"
+      />
+    </div>
+    <div
+      class="absolute w-20 h-20 rotate-45 bg-[#30D8D2]
+        border-black bottom-40 left-10 top-[250px]"
+    >
+    </div>
+    <div
+      class="absolute w-20 h-20 rotate-45 bg-[#E7C581]
+        border-black bottom-40 right-10 top-[250px]"
+    >
+    </div>
+    
+    <div class="flex items-center justify-center mt-10">
+        <img class="absolute"
+        src="/Separator.webp"/>
+    </div>
+  </section>
+
+  <PostIntro/>
+
+</article>
