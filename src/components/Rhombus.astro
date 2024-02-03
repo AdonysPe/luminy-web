@@ -1,0 +1,19 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src }: Props = Astro.props;
+---
+
+<style>
+  .box::before {
+    background-image: inherit;
+  }
+
+</style>
+<div
+  class="transition duration-300 ease-in-out hover:scale-110 box w-[200px] h-[200px] m-[48px] overflow-hidden inline-flex items-center justify-center rotate-45 before:content-[''] before:block before:w-[141%] before:h-[141%] before:shrink-0 before:bg-cover before:bg-center before:-rotate-45"
+  style=`background-image: url(${src})`
+>
+</div>

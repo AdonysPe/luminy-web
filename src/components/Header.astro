@@ -1,0 +1,35 @@
+---
+import '@fontsource/playfair-display'
+import Logo from './Logo.astro'
+---
+
+<header id="header-nav" class="fixed w-screen py-4 z-50 top-0 px-8 lg:px-0">
+    <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
+        <div class="col-span-1 flex  gap-4">
+            <a href="/" class="justify-self-start">
+                <Logo/>
+            </a>
+            <h2 style="font-family: 'Playfair Display'; color: white; font-size: 20px;">
+                LUMINY
+                <br>
+                AWARDS
+            <h2/>
+        </div>
+        <nav class="col-span-1 justify-self-center">
+            <ul class="flex gap-4">
+                <li>
+                    <a class="hover:underline" href="#"> Inicio </a>
+                </li>
+                <li>
+                    <a class="hover:underline" href="#"> Los premios </a>
+                </li>
+                <li>
+                    <a class="hover:underline" href="#"> Nominados </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="/" class="justify-self-end">
+            <Logo/>
+        </a>
+    </div>
+</header>
