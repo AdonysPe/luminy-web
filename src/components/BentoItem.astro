@@ -1,0 +1,27 @@
+---
+interface Props {
+    title: string;
+    class?: string;
+}
+
+const { title} = Astro.props;
+---
+
+<article class={`
+    ${Astro.props.class}
+    col-span-5
+    relative rounded-xl 
+    backdrop-blur-md
+    border border-black/10
+    shadow-inner shadow-white/10
+    overflow-hidden
+    group`}
+    >
+    
+    <slot name="image" />
+    <div class="select-none flex flex-col gap-1 p-6 text-lg z-20 justify-end h-full">
+        <h2 class="text-3xl font-bold text-balance text-black mb-4">{title}</h2>
+
+        <!-- <slot name="content"></slot> -->
+    </div>
+</article>

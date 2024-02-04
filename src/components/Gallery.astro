@@ -1,0 +1,79 @@
+---
+import BentoItem from "./BentoItem.astro";
+---
+
+<section
+  class={`
+    w-full max-w-[1400px]
+    grid grid-cols-10 auto-rows-[20rem] gap-4
+    mx-auto p-20`}
+>
+    <BentoItem class="col-span-10 md:col-span-3" title="">
+
+        <div slot="image"
+        class="absolute left-0 top-0 bottom-0 object-cover object-center 
+        h-full w-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat -z-10"
+        style="background-image: url('/photo1.webp');">
+        </div>
+
+    </BentoItem> 
+
+    <BentoItem
+        class="col-span-10 md:col-span-2 bg-slate-600"
+        title="Mira la transmisión completa">
+    </BentoItem> 
+
+    <BentoItem class="col-span-10 md:col-span-5" title="" >
+        <div slot="image"
+        class="absolute left-0 top-0 bottom-0 object-cover object-center 
+        h-full w-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat  -z-10"
+        style="background-image: url('/photo5.webp');">
+        </div>
+    </BentoItem> 
+
+    <!-- SEPARATOR -->
+    <BentoItem class="col-span-10 md:col-span-5" title="" >
+        <div slot="image"
+        class="absolute left-0 top-0 bottom-0 object-cover object-center 
+        h-full w-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat  -z-10"
+        style="background-image: url('/photo6.webp');">
+        </div>    
+    </BentoItem> 
+
+    <BentoItem class="col-span-10 md:col-span-2 bg-yellow-200" title="#Los Ganadores de la Primera Edición" >
+           
+    </BentoItem> 
+
+    <!-- SEPARATOR -->
+    <BentoItem class="col-span-10 md:col-span-3  h-[615px]" title="" >
+        <div slot="image"
+        class="absolute left-0 top-0 bottom-0 object-cover object-center 
+        h-full w-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat  -z-10"
+        style="background-image: url('/photo3.webp');">
+        </div> 
+    </BentoItem> 
+
+    <BentoItem class="col-span-10 md:col-span-3" title="" >
+        <div slot="image"
+        class="absolute left-0 top-0 bottom-0 object-cover object-center 
+        h-full w-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat  -z-10"
+        style="background-image: url('/photo7.webp');">
+        </div>    
+    </BentoItem> 
+
+    <!-- SEPARATOR -->
+    <BentoItem class="col-span-10 md:col-span-4" title="" >
+        <div slot="image"
+        class="absolute left-0 top-0 bottom-0 object-cover object-center 
+        h-full w-full group-hover:scale-110 transition-scale duration-1000
+        ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat  -z-10"
+        style="background-image: url('/photo2.webp');">
+        </div>    
+    </BentoItem> 
+
+</section>
