@@ -1,3 +1,11 @@
+---
+import { getI18N } from '../i18n/'
+
+const { currentLocale } = Astro 
+const i18n = getI18N({ currentLocale })
+---
+
+
 <section class="w-full p-20 max-w-[1200px] mx-auto">
 
     <div class="flex items-center justify-center">
@@ -6,7 +14,7 @@
     </div>
 
     <h2 class="uppercase text-4xl tracking-wide text-center font-semibold mb-10 text-balance mx-auto">
-        Revive la primera Edición de los premios Luminy</h2>
+        {i18n.PREFOOTER_TEXT}</h2>
 
     <lite-youtube
         class="shadow-2xl shadow-white/10 rounded-xl"

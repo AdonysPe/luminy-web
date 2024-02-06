@@ -3,6 +3,12 @@ import '@fontsource/playfair-display'
 import Logo from './Logo.astro'
 import HeaderLink from './HeaderLink.astro'
 
+import { getI18N } from '../i18n/'
+import LanguajesSelector from './LanguajesSelector.astro'
+
+const { currentLocale } = Astro 
+const i18n = getI18N({ currentLocale })
+
 ---
 
 <header id="header-nav" class="fixed w-screen py-4 z-50 top-0 px-8 lg:px-0">
@@ -18,9 +24,9 @@ import HeaderLink from './HeaderLink.astro'
 
             </HeaderLink>
             <h2 class="justify-self-start" style="font-family: 'Playfair Display'; color: white; font-size: 20px;">
-                LUMINY
+                {i18n.TEXT_LOGO}
                 <br>
-                AWARDS
+                {i18n.TEXT_LOGO_AFTER_BR}
             <h2/>
         </div>
         <style>
@@ -31,13 +37,17 @@ import HeaderLink from './HeaderLink.astro'
         <nav class="col-span-1 justify-self-center">
             <ul class="flex gap-4">
                 <li>
-                    <a class="menu-link hover:underline" href="#"> Inicio </a>
+                    <a class="menu-link hover:underline" href="#"> {i18n.LINK_1} </a>
                 </li>
                 <li>
-                    <a class="menu-link hover:underline" href="#"> Los premios </a>
+                    <a class="menu-link hover:underline" href="#"> {i18n.LINK_2} </a>
                 </li>
                 <li>
-                    <a class="menu-link hover:underline" href="#"> Nominados </a>
+                    <a class="menu-link hover:underline" href="#"> {i18n.LINK_3} </a>
+                </li>
+                
+                <li>
+                    <LanguajesSelector/>
                 </li>
             </ul>
         </nav>

@@ -5,6 +5,12 @@ import TiktokLogo from '../../public/icons/TiktokLogo.astro'
 import TwitchLogo from '../../public/icons/TwitchLogo.astro'
 import XLogo from '../../public/icons/XLogo.astro'
 import YoutubeLogo from '../../public/icons/YoutubeLogo.astro'
+
+import { getI18N } from '../i18n/'
+
+const { currentLocale } = Astro 
+const i18n = getI18N({ currentLocale })
+
 ---
 
 <footer class="bg-gradient-to-r bg-white w-full h-[400px] items-center flex justify-center ">
@@ -15,27 +21,27 @@ import YoutubeLogo from '../../public/icons/YoutubeLogo.astro'
 
             </a>
             <h2 style="font-family: 'Playfair Display'; color: black; font-size: 40px; font-weight: 800;">
-                LUMINY
+                {i18n.FOOTER_TEXT_1}
                 <br>
-                AWARDS
+                {i18n.FOOTER_TEXT_AFTER_BR}
             <h2/>
         </div>
 
         <div class="text-black text-1xl justify-center items-center">
             <a href="/">
                 <h3 class="m-5 font-semibold hover:text-golden  hover:underline">
-                    Inicio
+                    {i18n.FOOTER_TEXT_2}
                 </h3>
             </a>
             <a href="#">
                 <h3 class="m-5 font-semibold hover:text-golden  hover:underline" >
-                    Los premios
+                    {i18n.FOOTER_TEXT_3}
                 </h3>
             </a>
 
             <a href="#">
                 <h3 class="m-5 font-semibold hover:text-golden  hover:underline">
-                    Términos y condiciones
+                    {i18n.FOOTER_TEXT_4}
                 </h3>
             </a>
             
@@ -44,13 +50,13 @@ import YoutubeLogo from '../../public/icons/YoutubeLogo.astro'
         <div class="text-black text-1xl justify-center items-center">
             <a href="#">
                 <h3 class="m-5 font-semibold hover:text-golden hover:underline">
-                    Nominados
+                    {i18n.FOOTER_TEXT_5}
                 </h3>
             </a>
               
             <a href="#">
                 <h3 class="m-5 font-semibold hover:text-golden hover:underline">
-                    Politicas de privacidad
+                    {i18n.FOOTER_TEXT_6}
                     
                 </h3>  
             </a>
@@ -80,10 +86,10 @@ import YoutubeLogo from '../../public/icons/YoutubeLogo.astro'
 
         <div class="col-span-2 mt-5">
             <p class="text-black tracking-wide font-thin text-sm">
-                © 2024, The Luminy Awards. Todos los derechos reservados.
+                {i18n.FOOTER_TEXT_7}
             </p>
             <p class="text-black tracking-wide font-whin text-sm">
-                Esta no es la web oficial, desarrollada por @adonys- para fines educativos
+                {i18n.FOOTER_TEXT_8}
             </p>
         </div>
     </div>

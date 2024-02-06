@@ -1,6 +1,13 @@
+---
+import { getI18N } from '../i18n/'
+
+const { currentLocale } = Astro 
+const i18n = getI18N({ currentLocale })
+---
+
 <section class="relative flex flex-row inset-0 justify-center w-auto h-auto z-30">
     <div class="grid grid-cols-5 bg-black text-2xl pl-10  items-center -mt-8 h-auto ">
-        <p class="text-white tracking-normal mt-5 font-semibold col-span-3">Mira el evento en vivo en:</p>
+        <p class="text-white tracking-normal mt-5 font-semibold col-span-3">{i18n.VER_TEXT}</p>
  
         <a href="https://www.twitch.tv/" class="p-10 flex justify-center" style="background-color: rgb(100, 12, 245);;">
             <svg class="h-6 w-auto" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0" style="enable-background:new 0 0 2400 2800" version="1.1" viewBox="0 0 2400 2800"><style>.st1{fill:#9146ff}</style><path d="m2200 1300-400 400h-400l-350 350v-350H600V200h1600z" style="fill:#fff"/><g id="Layer_1-2"><path d="M500 0 0 500v1800h600v500l500-500h400l900-900V0H500zm1700 1300-400 400h-400l-350 350v-350H600V200h1600v1100z" class="st1"/><path d="M1700 550h200v600h-200zM1150 550h200v600h-200z" class="st1"/></g></svg>
